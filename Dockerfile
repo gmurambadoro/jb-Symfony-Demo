@@ -19,7 +19,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # install symfony
 RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash
-RUN apt install symfony-cli -y
+RUN apt-get install symfony-cli -y
 
 # enable apache2 modules
 RUN a2enmod rewrite
